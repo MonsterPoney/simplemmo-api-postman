@@ -1,0 +1,492 @@
+{
+	"info": {
+		"_postman_id": "81d3715f-ddf4-468c-b3c1-47623e17cc49",
+		"name": "SimpleMMO API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "11445547"
+	},
+	"item": [
+		{
+			"name": "Guild",
+			"item": [
+				{
+					"name": "List of Guilds",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "api_key",
+									"value": "{{token}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{url}}/guilds/all"
+					},
+					"response": []
+				},
+				{
+					"name": "Guild Information",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "api_key",
+									"value": "{{token}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/guilds/info/:guildId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"guilds",
+								"info",
+								":guildId"
+							],
+							"variable": [
+								{
+									"key": "guildId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guild Members",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "api_key",
+									"value": "{{token}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/guilds/members/:guildId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"guilds",
+								"members",
+								":guildId"
+							],
+							"variable": [
+								{
+									"key": "guildId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guild Member Contribution",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "api_key",
+									"value": "{{token}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/guilds/members/:guildId/contribution/:userId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"guilds",
+								"members",
+								":guildId",
+								"contribution",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "guildId",
+									"value": ""
+								},
+								{
+									"key": "userId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guild Wars",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "api_key",
+									"value": "{{token}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/guilds/wars/:guildId/:statusId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"guilds",
+								"wars",
+								":guildId",
+								":statusId"
+							],
+							"variable": [
+								{
+									"key": "guildId",
+									"value": ""
+								},
+								{
+									"key": "statusId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guild Seasons (All)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "api_key",
+									"value": "{{token}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{url}}/guilds/seasons"
+					},
+					"response": []
+				},
+				{
+					"name": "Guild Seasons Leaderboards",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "api_key",
+									"value": "{{token}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/guilds/seasons/:seasonId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"guilds",
+								"seasons",
+								":seasonId"
+							],
+							"variable": [
+								{
+									"key": "seasonId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Player",
+			"item": [
+				{
+					"name": "Your Information",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "api_key",
+									"value": "{{token}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{url}}/player/me"
+					},
+					"response": []
+				},
+				{
+					"name": "Player information",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "api_key",
+									"value": "{{token}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/player/info/:playerId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"player",
+								"info",
+								":playerId"
+							],
+							"variable": [
+								{
+									"key": "playerId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Player Equipped Items",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "api_key",
+									"value": "{{token}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/player/equipment/:playerId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"player",
+								"equipment",
+								":playerId"
+							],
+							"variable": [
+								{
+									"key": "playerId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Player Skills",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "api_key",
+									"value": "{{token}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/player/skills/:playerId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"player",
+								"skills",
+								":playerId"
+							],
+							"variable": [
+								{
+									"key": "playerId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Diamond Market",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "api_key",
+							"value": "{{token}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{url}}/diamond-market"
+			},
+			"response": []
+		},
+		{
+			"name": "Orphanage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "api_key",
+							"value": "{{token}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{url}}/orphanage"
+			},
+			"response": []
+		},
+		{
+			"name": "World Bosses",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "api_key",
+							"value": "{{token}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{url}}/worldboss/all"
+			},
+			"response": []
+		},
+		{
+			"name": "Item Information",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "api_key",
+							"value": "{{token}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/item/info/:itemId",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"item",
+						"info",
+						":itemId"
+					],
+					"variable": [
+						{
+							"key": "itemId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "url",
+			"value": "https://api.simple-mmo.com/v1",
+			"type": "string"
+		}
+	]
+}
